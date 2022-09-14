@@ -1,0 +1,50 @@
+{
+    "name": "virastman",
+    "description": "ویراست‌من: ویرایشگر فارسی",
+    "version": "1.0",
+    "author": "Mohsen Imani",
+    "manifest_version": 3,
+    "permissions": ["activeTab"],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_icon": {
+            "16": "images/icon_16.png",
+            "32": "images/icon_32.png",
+            "48": "images/icon_48.png",
+            "128": "images/icon_128.png"
+        },
+        "default_title": "ویراست‌من: ویرایشگر فارسی",
+        "default_popup": "popup/popup.html"
+    },
+    "icons": {
+        "16": "/images/icon_16.png",
+        "32": "/images/icon_32.png",
+        "48": "/images/icon_48.png",
+        "128": "/images/icon_128.png"
+    },
+    "content_scripts": [
+        {
+            "all_frames": true,
+            "matches": [
+                "*://*/*"
+            ],
+            "run_at": "document_idle",
+            "js": [
+                "content-script/diff_match_patch.js",
+                "content-script/content.js"
+            ],
+            "css": [
+                "content-script/content.css"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+          "resources": [ "fonts/*", "content-script/diff_match_patch.js" ],
+          "matches": [ "*://*/*" ]
+        }
+    ]
+}
+

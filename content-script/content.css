@@ -1,0 +1,175 @@
+@font-face{
+	font-family: 'iranyekan';
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/iranyekanwebregular.woff') format('woff'),
+	url('chrome-extension://__MSG_@@extension_id__/fonts/iranyekanwebregular.ttf') format('truetype');
+}
+
+.virastman-sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #1d4763;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  direction: rtl;
+  font-family: iranyekan;
+}
+
+.virastman-sidebar a {
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.virastman-alerts-container {
+  padding: 0px 20px;
+}
+
+.virastman-sidebar a:hover {
+  color: #d45353;
+}
+
+.virastman-sidebar .close-btn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.virastman-alert-container {
+  border-bottom: 10px dotted white;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.virastman-alert {
+  display: flex;
+  justify-content: space-between;
+}
+
+.virastman-alert-title {
+  color: #ff6262;
+  margin: 0px;
+}
+
+.virastman-wrong-value {
+  margin: 0;
+  color: #f4bb02;
+}
+
+.virastman-wrong-value {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.virastman-replacements-container {
+  margin-bottom: 2px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: column;
+}
+
+.virastman-replacement-button {
+  font-family: iranyekan;
+  width: 75%;
+  background-color: transparent;
+  border: 2px solid #44c44a;
+  padding: 5px;
+  text-align: center;
+  font-size: 16px;
+  color: #edf5ff;
+}
+
+.virastman-replacement-button:hover {
+  background-color: #44c44a;
+  color: #1d4763;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.virastman-ignore-alert-container {
+  display: flex;
+  justify-content: center;
+}
+
+.virastman-ignore-button {
+  font-family: iranyekan;
+  width: 75%;
+  background-color: transparent;
+  border: 2px solid #e44b34;
+  text-align: center;
+  font-size: 16px;
+  color: #edf5ff;
+}
+
+.virastman-ignore-button:hover {
+  background-color: #e44b34;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.ext-spell-check .misspelled {
+  color: inherit;
+  font: inherit;
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAMAAACDKl70AAAAFVBMVEX////+NQD+NQD+NQD+Sgz+NQD+NQCKU3Z/AAAAB3RSTlMAKVdwqL/ggPdRNgAAABdJREFUCNdjYGRiZGBgYWVhYGBmY2YAAADPAB54rWlqAAAAAElFTkSuQmCC);
+  direction: rtl;
+}
+
+.ext-spell-check .checking-grammer {
+  text-decoration: underline 3px dotted gold;
+}
+
+.ext-spell-check .misspelled .action-wrapper {
+  position: absolute;
+}
+
+.ext-spell-check .misspelled .action-wrapper .correct-action {
+  background-color: white;
+  color: black;
+  font-size: 10px;
+  border-radius: 5px;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  z-index: 999;
+  font-weight: normal;
+  overflow: hidden;
+  position: relative;
+}
+
+.ext-spell-check .misspelled .action-wrapper .correct-action span {
+  padding: 5px;
+  display: block;
+  color: darkgray;
+}
+
+.ext-spell-check .misspelled .action-wrapper .correct-action ul {
+  border-top: 1px solid #ddd;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.ext-spell-check .misspelled .action-wrapper .correct-action ul li {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.ext-spell-check .misspelled .action-wrapper .correct-action ul li:hover {
+  background: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.ext-spell-check .misspelled .invisible {
+  display: none;
+}

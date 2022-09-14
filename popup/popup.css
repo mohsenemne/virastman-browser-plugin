@@ -1,0 +1,53 @@
+@font-face{
+	font-family: 'iranyekan';
+	src: url('chrome-extension://__MSG_@@extension_id__/fonts/iranyekanwebregular.woff') format('woff'),
+	url('chrome-extension://__MSG_@@extension_id__/fonts/iranyekanwebregular.ttf') format('truetype');
+}
+
+body {
+    width: 348px;
+    padding: 30px;
+    margin: 0px;
+    background-color: #edf5ff;;
+    font-family: iranyekan !important;
+}
+
+.header .logo-container img {
+    height: 50px;
+}
+
+.header .logo-container .title-container p {
+    margin: 20px 0px 30px;
+}
+
+.header .logo-container .title-container p span {
+    color: #4ac4f3;
+    font-weight: bold;
+}
+
+.content-container .button-container {
+    text-align: center;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.content-container .button-container button {
+    padding: 10px 30px;
+    background-color: #1d4763;
+    color: #edf5ff;
+    border: 2px solid #232323;
+    font-family: iranyekan;
+    width: 50%;
+    padding: 5px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.content-container .button-container button:hover {
+    background-color: #232323;
+    cursor: pointer;
+    color: #edf5ff;
+}
